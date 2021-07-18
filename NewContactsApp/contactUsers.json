@@ -1,0 +1,32 @@
+[
+    {
+        "fullname": "Andrew Hudson",
+        "imageString": "human1",
+        "firstCharacter": "A",
+        "id": 1
+    },
+    {
+        "fullname": "Bob Ashford",
+        "imageString": "human2",
+        "firstCharacter": "B",
+        "id": 2
+    },
+    {
+        "fullname": "Chloe Jones",
+        "imageString": "human3",
+        "firstCharacter": "C",
+        "id": 3
+    },
+    {
+        "fullname": "David Leens",
+        "imageString": "human4",
+        "firstCharacter": "D",
+        "id": 4
+    },
+    {
+        "fullname": "Emma Lee",
+        "imageString": "human5",
+        "firstCharacter": "E",
+        "id": 5
+    }
+]

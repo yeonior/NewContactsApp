@@ -1,0 +1,32 @@
+[
+    {
+        "fullname": "Rick Davis",
+        "imageString": "human6",
+        "firstCharacter": "R",
+        "id": 6
+    },
+    {
+        "fullname": "Megan Bell",
+        "imageString": "human7",
+        "firstCharacter": "M",
+        "id": 7
+    },
+    {
+        "fullname": "Brandon Smith",
+        "imageString": "human8",
+        "firstCharacter": "B",
+        "id": 8
+    },
+    {
+        "fullname": "Paul Lewis",
+        "imageString": "human9",
+        "firstCharacter": "P",
+        "id": 9
+    },
+    {
+        "fullname": "Stacy Ward",
+        "imageString": "human10",
+        "firstCharacter": "S",
+        "id": 10
+    }
+]
