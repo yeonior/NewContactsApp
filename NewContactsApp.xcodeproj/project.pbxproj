@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		A232C4B126A481160002E745 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232C4B026A481160002E745 /* MainTabBarController.swift */; };
 		A232C4B326A48B570002E745 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232C4B226A48B570002E745 /* RecentViewController.swift */; };
+		A2CF472F26A58A3F001A761E /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF472E26A58A3F001A761E /* ProfileCell.swift */; };
+		A2CF473126A58D77001A761E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF473026A58D77001A761E /* UserModel.swift */; };
+		A2CF473326A58DAC001A761E /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF473226A58DAC001A761E /* SelfConfiguringCell.swift */; };
+		A2CF473926A58F18001A761E /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF473826A58F18001A761E /* FavouriteCell.swift */; };
+		A2CF473B26A58F21001A761E /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF473A26A58F21001A761E /* ContactCell.swift */; };
+		A2CF473D26A5A199001A761E /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF473C26A5A199001A761E /* UIViewController + Extensions.swift */; };
+		A2CF474026A5B7B8001A761E /* Bundle + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF473F26A5B7B8001A761E /* Bundle + Extension.swift */; };
 		A2D8CE9F26A474B700C5E4B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D8CE9E26A474B700C5E4B2 /* AppDelegate.swift */; };
 		A2D8CEA126A474B700C5E4B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D8CEA026A474B700C5E4B2 /* SceneDelegate.swift */; };
 		A2D8CEA326A474B700C5E4B2 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D8CEA226A474B700C5E4B2 /* ContactsViewController.swift */; };
@@ -21,6 +28,13 @@
 /* Begin PBXFileReference section */
 		A232C4B026A481160002E745 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A232C4B226A48B570002E745 /* RecentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		A2CF472E26A58A3F001A761E /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		A2CF473026A58D77001A761E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A2CF473226A58DAC001A761E /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		A2CF473826A58F18001A761E /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
+		A2CF473A26A58F21001A761E /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		A2CF473C26A5A199001A761E /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		A2CF473F26A5B7B8001A761E /* Bundle + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extension.swift"; sourceTree = "<group>"; };
 		A2D8CE9B26A474B700C5E4B2 /* NewContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D8CE9E26A474B700C5E4B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2D8CEA026A474B700C5E4B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +57,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2CF473426A58DD4001A761E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A2CF472E26A58A3F001A761E /* ProfileCell.swift */,
+				A2CF473826A58F18001A761E /* FavouriteCell.swift */,
+				A2CF473A26A58F21001A761E /* ContactCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A2CF473526A58DDB001A761E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2CF473026A58D77001A761E /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2CF473626A58DE6001A761E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A2CF473226A58DAC001A761E /* SelfConfiguringCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A2CF473726A58DF4001A761E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A232C4B026A481160002E745 /* MainTabBarController.swift */,
+				A2D8CEA226A474B700C5E4B2 /* ContactsViewController.swift */,
+				A232C4B226A48B570002E745 /* RecentViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A2CF473E26A5A1AF001A761E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2CF473F26A5B7B8001A761E /* Bundle + Extension.swift */,
+				A2CF473C26A5A199001A761E /* UIViewController + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A2D8CE9226A474B700C5E4B2 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +123,11 @@
 			children = (
 				A2D8CE9E26A474B700C5E4B2 /* AppDelegate.swift */,
 				A2D8CEA026A474B700C5E4B2 /* SceneDelegate.swift */,
-				A232C4B026A481160002E745 /* MainTabBarController.swift */,
-				A2D8CEA226A474B700C5E4B2 /* ContactsViewController.swift */,
-				A232C4B226A48B570002E745 /* RecentViewController.swift */,
+				A2CF473526A58DDB001A761E /* Models */,
+				A2CF473726A58DF4001A761E /* Controllers */,
+				A2CF473426A58DD4001A761E /* Cell */,
+				A2CF473626A58DE6001A761E /* Protocols */,
+				A2CF473E26A5A1AF001A761E /* Extensions */,
 				A2D8CEB426A4772300C5E4B2 /* favouriteUsers.json */,
 				A2D8CEB226A4750900C5E4B2 /* contactUsers.json */,
 				A2D8CEA726A474B800C5E4B2 /* Assets.xcassets */,
@@ -147,9 +208,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CF473B26A58F21001A761E /* ContactCell.swift in Sources */,
 				A2D8CEA326A474B700C5E4B2 /* ContactsViewController.swift in Sources */,
+				A2CF473326A58DAC001A761E /* SelfConfiguringCell.swift in Sources */,
+				A2CF473126A58D77001A761E /* UserModel.swift in Sources */,
 				A232C4B326A48B570002E745 /* RecentViewController.swift in Sources */,
+				A2CF473926A58F18001A761E /* FavouriteCell.swift in Sources */,
 				A2D8CE9F26A474B700C5E4B2 /* AppDelegate.swift in Sources */,
+				A2CF473D26A5A199001A761E /* UIViewController + Extensions.swift in Sources */,
+				A2CF472F26A58A3F001A761E /* ProfileCell.swift in Sources */,
+				A2CF474026A5B7B8001A761E /* Bundle + Extension.swift in Sources */,
 				A232C4B126A481160002E745 /* MainTabBarController.swift in Sources */,
 				A2D8CEA126A474B700C5E4B2 /* SceneDelegate.swift in Sources */,
 			);
