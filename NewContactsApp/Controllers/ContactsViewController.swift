@@ -9,22 +9,15 @@ import UIKit
 
 class ContactsViewController: UIViewController {
     
-    let profile = User(fullname: "Alex Richards", imageString: "human1", firstCharacter: "A", id: 20)
-    let favouriteUsers = Bundle.main.decode([User].self, from: "favouriteUsers.json")
-    let contactUsers = Bundle.main.decode([User].self, from: "contactUsers.json")
+    
     
     let groupsBarButtonItem = UIBarButtonItem(title: "Groups", style: .plain, target: self, action: #selector(groupsBarButtonItemTapped))
     let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonItemTapped))
-        
-    enum Section: Int {
-        case profile
-        case favourites
-        case contacts
-    }
     
     var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, User>! = nil
-    var currentSnapshot: NSDiffableDataSourceSnapshot<Section, User>! = nil
+    var dataSource: UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>! = nil
+    var currentSnapshot: NSDiffableDataSourceSnapshot<ContactsModel.UserCollection, ContactsModel.User>! = nil
+    let contactsModel = ContactsModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +45,8 @@ class ContactsViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.backgroundColor = .gray
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
+        collectionView.backgroundColor = .systemBackground
         view.addSubview(collectionView)
         
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: ProfileCell.reuseId)
@@ -62,24 +55,91 @@ class ContactsViewController: UIViewController {
         
     }
     
-    private func reloadData() {
-        currentSnapshot = NSDiffableDataSourceSnapshot<Section, User>()
+    private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         
-        currentSnapshot.appendSections([.profile, .favourites, .contacts])
-        currentSnapshot.appendItems([profile], toSection: .profile)
-        currentSnapshot.appendItems(favouriteUsers, toSection: .favourites)
-        currentSnapshot.appendItems(contactUsers, toSection: .contacts)
+        let layout = UICollectionViewCompositionalLayout { [unowned self] sectionIndex, layoutEnvironment in
+            
+            let type = self.currentSnapshot.sectionIdentifiers[sectionIndex].type
+            
+            switch type {
+            
+            case .profile:
+                return self.createProfile()
+            case .favourites:
+                return self.createFavourites()
+            case .contacts:
+                return self.createContacts()
+            }
+        }
+        
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 16
+        layout.configuration = config
+        
+        return layout
+    }
+    
+    private func createProfile() -> NSCollectionLayoutSection {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(58))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        
+        return section
+    }
+    
+    private func createFavourites() -> NSCollectionLayoutSection {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(110), heightDimension: .absolute(120))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 12
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 1)
+        section.orthogonalScrollingBehavior = .continuous
+        
+        return section
+    }
+    
+    private func createContacts() -> NSCollectionLayoutSection {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(55))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 1
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
+        
+        return section
+    }
+    
+    private func reloadData() {
+        currentSnapshot = NSDiffableDataSourceSnapshot<ContactsModel.UserCollection, ContactsModel.User>()
+        
+        contactsModel.collections.forEach { collection in
+            currentSnapshot.appendSections([collection])
+            currentSnapshot.appendItems(collection.users)
+        }
         
         dataSource.apply(currentSnapshot, animatingDifferences: true)
     }
     
     // MARK: - DataSource
     func createDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, User>(collectionView: collectionView, cellProvider: { collectionView, indexPath, user in
+        dataSource = UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>(collectionView: collectionView, cellProvider: { [unowned self] collectionView, indexPath, user in
             
-            guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknow section type") }
+            let type = self.currentSnapshot.sectionIdentifiers[indexPath.section].type
             
-            switch section {
+            switch type {
             case .profile:
                 return self.configure(collectionView: collectionView, cellType: ProfileCell.self, with: user, for: indexPath)
             case .favourites:
