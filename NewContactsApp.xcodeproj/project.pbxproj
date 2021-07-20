@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A208DE8426A74C50005F9E9A /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A208DE8326A74C50005F9E9A /* SectionHeader.swift */; };
+		A208DE8626A7532A005F9E9A /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A208DE8526A7532A005F9E9A /* UIView + Extension.swift */; };
 		A232C4B126A481160002E745 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232C4B026A481160002E745 /* MainTabBarController.swift */; };
 		A232C4B326A48B570002E745 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232C4B226A48B570002E745 /* RecentViewController.swift */; };
 		A2CF472F26A58A3F001A761E /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF472E26A58A3F001A761E /* ProfileCell.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A208DE8326A74C50005F9E9A /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		A208DE8526A7532A005F9E9A /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		A232C4B026A481160002E745 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A232C4B226A48B570002E745 /* RecentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
 		A2CF472E26A58A3F001A761E /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 		A2CF473426A58DD4001A761E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A208DE8326A74C50005F9E9A /* SectionHeader.swift */,
 				A2CF472E26A58A3F001A761E /* ProfileCell.swift */,
 				A2CF473826A58F18001A761E /* FavouriteCell.swift */,
 				A2CF473A26A58F21001A761E /* ContactCell.swift */,
@@ -98,6 +103,7 @@
 			children = (
 				A2CF473F26A5B7B8001A761E /* Bundle + Extension.swift */,
 				A2CF473C26A5A199001A761E /* UIViewController + Extensions.swift */,
+				A208DE8526A7532A005F9E9A /* UIView + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 				A2D8CEA326A474B700C5E4B2 /* ContactsViewController.swift in Sources */,
 				A2CF473326A58DAC001A761E /* SelfConfiguringCell.swift in Sources */,
 				A2CF473126A58D77001A761E /* UserModel.swift in Sources */,
+				A208DE8626A7532A005F9E9A /* UIView + Extension.swift in Sources */,
 				A232C4B326A48B570002E745 /* RecentViewController.swift in Sources */,
 				A2CF473926A58F18001A761E /* FavouriteCell.swift in Sources */,
 				A2D8CE9F26A474B700C5E4B2 /* AppDelegate.swift in Sources */,
@@ -220,6 +227,7 @@
 				A2CF474026A5B7B8001A761E /* Bundle + Extension.swift in Sources */,
 				A232C4B126A481160002E745 /* MainTabBarController.swift in Sources */,
 				A2D8CEA126A474B700C5E4B2 /* SceneDelegate.swift in Sources */,
+				A208DE8426A74C50005F9E9A /* SectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

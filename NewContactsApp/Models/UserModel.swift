@@ -9,11 +9,16 @@ import UIKit
 
 class ContactsModel {
     
+    enum CornersDirections: Int, Codable {
+        case top, all, bottom, nope
+    }
+    
     struct User: Hashable, Decodable {
         var fullname: String
         var imageString: String
         var firstCharacter: String
         var id: Int
+        var direction: CornersDirections?
         
         func hash(into hasher: inout Hasher) {
             hasher.combine(id)
