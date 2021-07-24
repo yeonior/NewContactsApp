@@ -11,6 +11,10 @@
 		A208DE8626A7532A005F9E9A /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A208DE8526A7532A005F9E9A /* UIView + Extension.swift */; };
 		A232C4B126A481160002E745 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232C4B026A481160002E745 /* MainTabBarController.swift */; };
 		A232C4B326A48B570002E745 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A232C4B226A48B570002E745 /* RecentViewController.swift */; };
+		A2C3B72426ABF7C700CDC9B8 /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2C3B72326ABF7C600CDC9B8 /* SF-Pro-Rounded-Medium.otf */; };
+		A2C3B72626ABF7D200CDC9B8 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2C3B72526ABF7D200CDC9B8 /* SF-Pro-Rounded-Regular.otf */; };
+		A2C3B72826ABF7DE00CDC9B8 /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2C3B72726ABF7DE00CDC9B8 /* SF-Pro-Rounded-Semibold.otf */; };
+		A2C3B72A26ABFACF00CDC9B8 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C3B72926ABFACF00CDC9B8 /* UIFont + Extension.swift */; };
 		A2CF472F26A58A3F001A761E /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF472E26A58A3F001A761E /* ProfileCell.swift */; };
 		A2CF473126A58D77001A761E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF473026A58D77001A761E /* UserModel.swift */; };
 		A2CF473326A58DAC001A761E /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF473226A58DAC001A761E /* SelfConfiguringCell.swift */; };
@@ -32,6 +36,10 @@
 		A208DE8526A7532A005F9E9A /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		A232C4B026A481160002E745 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A232C4B226A48B570002E745 /* RecentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		A2C3B72326ABF7C600CDC9B8 /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
+		A2C3B72526ABF7D200CDC9B8 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		A2C3B72726ABF7DE00CDC9B8 /* SF-Pro-Rounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Semibold.otf"; sourceTree = "<group>"; };
+		A2C3B72926ABFACF00CDC9B8 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		A2CF472E26A58A3F001A761E /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		A2CF473026A58D77001A761E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A2CF473226A58DAC001A761E /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
@@ -104,6 +112,7 @@
 				A2CF473F26A5B7B8001A761E /* Bundle + Extension.swift */,
 				A2CF473C26A5A199001A761E /* UIViewController + Extensions.swift */,
 				A208DE8526A7532A005F9E9A /* UIView + Extension.swift */,
+				A2C3B72926ABFACF00CDC9B8 /* UIFont + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -136,6 +145,9 @@
 				A2CF473E26A5A1AF001A761E /* Extensions */,
 				A2D8CEB426A4772300C5E4B2 /* favouriteUsers.json */,
 				A2D8CEB226A4750900C5E4B2 /* contactUsers.json */,
+				A2C3B72326ABF7C600CDC9B8 /* SF-Pro-Rounded-Medium.otf */,
+				A2C3B72526ABF7D200CDC9B8 /* SF-Pro-Rounded-Regular.otf */,
+				A2C3B72726ABF7DE00CDC9B8 /* SF-Pro-Rounded-Semibold.otf */,
 				A2D8CEA726A474B800C5E4B2 /* Assets.xcassets */,
 				A2D8CEA926A474B800C5E4B2 /* LaunchScreen.storyboard */,
 				A2D8CEAC26A474B800C5E4B2 /* Info.plist */,
@@ -201,9 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D8CEAB26A474B800C5E4B2 /* LaunchScreen.storyboard in Resources */,
+				A2C3B72426ABF7C700CDC9B8 /* SF-Pro-Rounded-Medium.otf in Resources */,
 				A2D8CEA826A474B800C5E4B2 /* Assets.xcassets in Resources */,
 				A2D8CEB326A4750900C5E4B2 /* contactUsers.json in Resources */,
 				A2D8CEB526A4772300C5E4B2 /* favouriteUsers.json in Resources */,
+				A2C3B72826ABF7DE00CDC9B8 /* SF-Pro-Rounded-Semibold.otf in Resources */,
+				A2C3B72626ABF7D200CDC9B8 /* SF-Pro-Rounded-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C3B72A26ABFACF00CDC9B8 /* UIFont + Extension.swift in Sources */,
 				A2CF473B26A58F21001A761E /* ContactCell.swift in Sources */,
 				A2D8CEA326A474B700C5E4B2 /* ContactsViewController.swift in Sources */,
 				A2CF473326A58DAC001A761E /* SelfConfiguringCell.swift in Sources */,
