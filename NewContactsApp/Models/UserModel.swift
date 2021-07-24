@@ -32,6 +32,7 @@ class ContactsModel {
     }
     
     struct UserCollection: Hashable {
+        
         var type: SectionType
         var header: String?
         var users: [User]
@@ -77,7 +78,8 @@ extension ContactsModel {
             }
         }
         
-        dict.forEach { key, users in
+        let sortedDict = dict.sorted(by: { $0.key < $1.key })
+        sortedDict.forEach { key, users in
             _collection.append(UserCollection(type: .contacts, header: key, users: users))
         }
     }
