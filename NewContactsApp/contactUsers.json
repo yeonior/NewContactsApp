@@ -12,21 +12,21 @@
         "id": 2
     },
     {
-        "fullname": "Chloe Jones",
+        "fullname": "Ashley Jones",
         "imageString": "human3",
-        "firstCharacter": "C",
+        "firstCharacter": "A",
         "id": 3
     },
     {
-        "fullname": "David Leens",
+        "fullname": "Christopher Leens",
         "imageString": "human4",
-        "firstCharacter": "D",
+        "firstCharacter": "C",
         "id": 4
     },
     {
-        "fullname": "Emma Lee",
+        "fullname": "Chloe Lee",
         "imageString": "human5",
-        "firstCharacter": "E",
+        "firstCharacter": "C",
         "id": 5
     }
 ]
